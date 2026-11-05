@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfólio|Contatos</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><strong>Contatos</strong></h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<main> 
+  <section id="contato"> 
+    <!-- sessão de formulário de contatos -->
+    <h2><strong>Envie uma mensagem</strong></h2>
+    <p> Se preferir, pode enviar uma mensagem diretamente através do formulário abaixo:</p>
+
+    <from action="#" method="GET">
+      <label for="nome completo">Nome completo:</label><br/>
+      <input type="text" placeholder="Digite seu nome completo" id="nome completo" name="nome completo"/><br/>
+      <label for="data de nascimento">Data nascimento:</label><br/>
+      <input type="date" placeholder="Selecione sua data de nascimento" id="data de nascimento" name="data de nascimento"/><br/>
+      <label for="password">Password:</label><br/>
+      <input type="password" placeholder="Digite sua password" id="password" name="password"/><br/>
+      
+      <label for="sexo">Sexo:</label><br/>
+      <select id="sexo" name="sexo">
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+      </select><br/>
+
+      <textarea
+     id="descricao"
+      name="descricao"
+      placeholder="Digite sua mensagem aqui..."
+      rows="6"    
+      cols="40"
+      > 
+      </textarea><br/>
+
+      <label for="telefone">Telefone:</label>
+      <input type="radio" id="telefone" name="preferencia" checked/>
+    
+      <label for="Email">Email:</label>
+        <input type="radio" id="Email" name="preferencia"/><br/>
+
+        <label for="autorização"></label>Autorização para uso dos dados introduzidos</label>
+        <input id="autorização" name="autorização" type="checkbox"/>
+      
+
+      <button>Enviar</button>
+    </from>
+  </section>
+</main>
+  </body>
+</html> 
