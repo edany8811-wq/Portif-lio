@@ -2,6 +2,21 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Entre em contato com Daniela Tavares para saber mais sobre sua carreira, proposta de estágio, emprego, projetos web e design e esclarecimento de dúvidas"
+    />
+    <meta name="author" content="Daniela Tavares" />
+    <meta
+      name="keywords"
+      content="contactos,saber,mais,dúvidas,email,telefone"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+      ,
+      initial-scale="1.0/>"
+    />
     <title>Portfólio|Contatos</title>
   </head>
 
@@ -18,49 +33,115 @@
       </nav>
     </header>
 
-<main> 
-  <section id="contato"> 
-    <!-- sessão de formulário de contatos -->
-    <h2><strong>Envie uma mensagem</strong></h2>
-    <p> Se preferir, pode enviar uma mensagem diretamente através do formulário abaixo:</p>
+    <main>
+      <section id="contato">
+        <!-- sessão de formulário de contatos -->
+        <h2><strong>Envie uma mensagem</strong></h2>
+        <p>
+          Se preferir, pode enviar uma mensagem diretamente através do
+          formulário abaixo:
+        </p>
 
-    <from action="#" method="GET">
-      <label for="nome completo">Nome completo:</label><br/>
-      <input type="text" placeholder="Digite seu nome completo" id="nome completo" name="nome completo"/><br/>
-      <label for="data de nascimento">Data nascimento:</label><br/>
-      <input type="date" placeholder="Selecione sua data de nascimento" id="data de nascimento" name="data de nascimento"/><br/>
-      <label for="password">Password:</label><br/>
-      <input type="password" placeholder="Digite sua password" id="password" name="password"/><br/>
-      
-      <label for="sexo">Sexo:</label><br/>
-      <select id="sexo" name="sexo">
-        <option value="Masculino">Masculino</option>
-        <option value="Feminino">Feminino</option>
-      </select><br/>
+        <from action="#" method="GET">
+          <fieldset>
+            <div>
+              <label for="nome">Nome</label> <br />
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="insira o seu nome"
+                required
+              />
+            </div>
 
-      <textarea
-     id="descricao"
-      name="descricao"
-      placeholder="Digite sua mensagem aqui..."
-      rows="6"    
-      cols="40"
-      > 
-      </textarea><br/>
+            <div>
+              <label for="email">Email:</label><br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="insira seu email"
+                required
+              />
+            </div>
 
-      <label for="telefone">Telefone:</label>
-      <input type="radio" id="telefone" name="preferencia" checked/>
-    
-      <label for="Email">Email:</label>
-        <input type="radio" id="Email" name="preferencia"/><br/>
+            <div>
+              <label for="telefone">Telefone(opcional)</label> <br />
+              <input
+                type="telefone"
+                name="telefone"
+                id="telefone"
+                placeholder="(+238) 000 00 00"
+              />
+            </div>
+          </fieldset>
 
-        <label for="autorização"></label>Autorização para uso dos dados introduzidos</label>
-        <input id="autorização" name="autorização" type="checkbox"/>
-      
-        <button type="submit">Enviar</button>
-        <button type="resert">Limpar</button>
-      
-    </from>
-  </section>
-</main>
+          <fieldset>
+            <label>Motivos de contacto</label><br />
+            
+              <label for="assunto">Assunto:</label><br/>
+              <select id="assunto" name="assunto" required>
+                <option value="">-- Selecione uma opição --</option>
+                <option value="Proposta de estagio">Proposta de estágio</option>
+                <option value="projetos ou colaboracoes">
+                  Projetos ou colaborações
+                </option>
+                <option value="Duvidas ou esclarecimento">
+                  Dúvidas ou esclarecimento
+                </option>
+              </select>
+        
+
+            <div>
+              <label for="mensagem">Mensagem</label><br />
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="sua mensagem"
+                rows="10"
+                cols="20 required maxlengh=255"
+              ></textarea>
+            </div>
+            <br />
+
+            <div>
+              <label for="resposta">Como preferes receber a resposta?</label
+              ><br />
+
+              <input
+                type="radio"
+                id="telefone"
+                name="resposta"
+                value="telefone"
+                checked
+              />
+              <label for="telefone">Telefone</label>
+
+              <input type="radio" id="email" name="resposta" value="email" />
+              <label for="email">Email</label>
+            </div>
+            <br />
+
+            <div>
+              <label>Autorizo a utilização dos meus dados e aceito os termos de uso da plataforma!</label><br/>
+              <label for="autorizacao"></label>
+              <input
+                type="checkbox"
+                value="sim"
+                id="autorizacao"
+                name="autorizacao"
+              />
+            </div><br/>
+            
+          </fieldset>
+
+          <div><br/>
+          <button type="submit">Enviar</button>
+          <button type="resert">Limpar</button>
+          </div>
+        </from>
+      </section>
+    </main>
   </body>
-</html> 
+</html>
