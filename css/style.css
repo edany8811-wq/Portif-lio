@@ -1,5 +1,51 @@
-body{font-family: san-serif;
-      background-color:azure;}
+body {
+  font-family: "Marcellus", serif;
+  background-color: #0b090a;
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+  color: rgb(224, 214, 214);
+  position: relative;
+}
 
-      h2{color:red; font-size: 12pt; font-weight:bold}
-      h1{color:black; font-size: 12pt; font-weight:bold}
+h2 {
+  color: red;
+  font-size: 12pt;
+  font-weight: bold;
+}
+h1 {
+  color: black;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  light: 10%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px; 
+  border:none;
+  border-bottom: 1px solid white;
+  box-shadow: 1px 1px white;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav > ul > li,
+nav > ul >li > a {
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+}
+
+nav {
+  widht: 100%;
+  
+}
