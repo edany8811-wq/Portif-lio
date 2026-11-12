@@ -49,3 +49,12 @@ nav {
   widht: 100%;
   
 }
+
+.etiquetas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
