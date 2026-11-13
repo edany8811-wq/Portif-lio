@@ -43,7 +43,7 @@
       <nav>
         <ul >
           <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre mim</a></li>
+          <li><a href="#sobre-mim">Sobre mim</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="contato.html">Contato</a></li>
           <li><a href="#percurso">Meu Percurso</a></li>
@@ -61,7 +61,12 @@
       </nav>
     </header>
     <main>
-      <section id="sobre mim">
+      <audio controls preload="metadata" autoplay >
+        <source src="audio/audio-fundo.mp3#t=00:01:00" type="audio/mp3">
+
+        <p>O seu browswe não suporta o elemento de áudio.</p>
+      </audio>
+      <section id="sobre-mim">
         <!-- Essa é a seção sobre mim -->
         <h2>Sobre mim</h2>
         <p>
@@ -77,6 +82,36 @@
           curiosa e com muitos sonhos para realizar.
         </p>
       </section>
+
+      <section class="apresentacao-vidio">
+        <!--Apresentaçao de vidio-->
+
+        <h2>Um pequeno vídio sobre mim.</h2>
+        <div class="video-pai">
+          <video  controls loop autoplay muted>
+            <source src="video/apresentacao.mp4"
+             type~="video/mp4" 
+            />
+
+            <!--vtt subtitulo-->
+            <track
+            kind="subtitles"
+            srclang="pt"
+            src="video/apresentacao.vtt"
+            label="Português"
+            default
+            />
+            <p>O seu browser não suporta o elemnto do vídeo.</p>
+
+            <a href="video/apresentacao.mp4" download>Download do vídeo</a>
+
+            <figcaption>
+              <p>Apresentação da Daniela.</p>
+            </figcaption>
+          </video>
+        </div>
+        
+        <section>
 
       <section id="percurso">
         <!-- Essa é a seção do meu percurso -->
