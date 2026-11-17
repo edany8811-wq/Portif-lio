@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     <header>
@@ -44,7 +45,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="px-24 py-16">
       <section>
         <!-- Sobre mim: h2, dois parágrafos, h3 "Competências em desenvolvimento",
              lista class="etiquetas" e caixa aside class="curiosidade" -->
@@ -76,9 +77,56 @@
              source e track com as legendas) e figcaption -->
       </section>
 
-      <section id="percurso">
+      <section id="percurso" class="mt-11 flex flex-col gap-10">
         <!-- O meu percurso: h2, parágrafo e tabela dentro de
              div class="tabela-responsiva" -->
+             <h2>O meu percurso</h2>
+             <table class="outline outline-2">
+              <thead class="border-b-2">
+                <tr>
+                  <th scope="col" class="p-2">Período</th>
+                  <th scope="col" class="p-2">Área</th>
+                  <th scope="col" class="p-2">Entidade</th>
+                  <th scope="col" class="p-2">Local</th>
+                </tr>
+              </thead>
+
+              <tbody class="text-center">
+                <tr>
+                  <th scope="row">2023-presente</th>
+                  <td>Designer Gráfico</td>
+                  <td>PJ</td>
+                  <td>Home office</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">2025-presente</th>
+                  <td>web design</td>
+                  <td>PJ</td>
+                  <td>Home office</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">2025-2026</th>
+                  <td>Social mídea</td>
+                  <td>Comissão ESML</td>
+                  <td>Home office/Calabaceira</td>
+                </tr>
+
+                <tr>
+              <th scope="row">2020-2026</th>
+              <td>Estudante do ensino médio/Humanística</td>
+              <td>Escola Secundária Manuel Lopes</td>
+              <td>Calabaceira</td>
+            </tr>
+
+            <tr>
+              <th scope="row">2026-presente</th>
+              <td>Estudante de full stack web development</td>
+              <td>Labanta Academia</td>
+              <td>ASA</td>
+              </tbody>
+             </table>
       </section>
 
       <section>
