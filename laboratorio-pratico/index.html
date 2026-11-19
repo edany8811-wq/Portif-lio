@@ -1,485 +1,415 @@
-<!doctype html>
-
-<html lang="pt-PT">
+<!DOCTYPE html>
+<!-- <html>: raiz da página; lang="pt" diz ao navegador que o texto está em português -->
+<html lang="pt">
+  <!-- <head>: informação sobre a página (não aparece no ecrã) -->
   <head>
+    <!-- <meta charset>: permite mostrar acentos e símbolos (ã, ç, é...) corretamente -->
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- <meta viewport>: faz a página ajustar-se bem ao tamanho do telemóvel -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>: texto que aparece no separador do navegador -->
+    <title>Rui Costa — Fotografia | Porto</title>
+    <!-- <meta description>: pequena descrição da página para os motores de busca -->
     <meta
-      content="Portefólio de Rui Costa, fotógrafo de casamentos e paisagens no Porto. Fotografia documental com luz natural e impressões de arte."
       name="description"
+      content="Rui Costa, fotógrafo de casamentos e paisagens no Porto."
     />
-    <meta content="Rui Costa" name="author" />
-    <title>Rui Costa | Fotografia</title>
-    <link href="images/retrato-rui-costa.jpg" rel="icon" type="image/svg+xml" />
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link  href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"/>
-    <link href="css/pratica.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Fontes do Google: Newsreader (títulos e textos de leitura) e Manrope (etiquetas e textos pequenos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ícones Material Symbols (usados em Curiosidade, aspas, e-mail e calendário) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link> do nosso CSS: liga o ficheiro com todos os estilos da página -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
+  <!-- <body>: tudo o que aparece no ecrã -->
   <body>
-    <!-- Apresentação -->
-    <header class="topo">
-      <div class="topo-interior">
-        <a class="marca" href="index.html">
-          <span class="marca-nome">Rui Costa</span>
-          <span class="marca-sub">Fotografia • Porto</span>
+    <!-- ============ CABEÇALHO (fica fixo no topo) ============ -->
+    <!-- <header>: topo da página -->
+    <header class="cabecalho">
+      <!-- <div>: caixa que alinha o conteúdo do cabeçalho (logótipo à esquerda, menu à direita) -->
+      <div class="cabecalho__interior">
+        <!-- <a>: o logótipo é um link que leva ao início -->
+        <a class="logo" href="#">
+          <!-- <span>: nome do fotógrafo (letra grande) -->
+          <span class="logo__nome">Rui Costa</span>
+          <!-- <span>: linha pequena por baixo do nome -->
+          <span class="logo__sub">Fotografia • Porto</span>
         </a>
-        <div class="topo-direita">
-      <nav class="menu principal">
-          <a href="#inicio">Ínicio</a>
-          <a href="servicos">Serviços</a>
-          <a href="contactos">Contactos</a>
-            </nav>
-          <div class="topo-direita">
-            <a href="disponibilidade">Disponibilidade</a>
-             <img
+
+        <!-- <div>: agrupa o menu e o botão do lado direito -->
+        <div class="cabecalho__direita">
+          <!-- <nav>: menu principal (escondido em ecrãs pequenos) -->
+          <nav class="menu" aria-label="Menu principal">
+            <!-- <a>: cada link do menu -->
+            <a class="menu__link" href="#">Início</a>
+            <a class="menu__link" href="#">Serviços</a>
+            <a class="menu__link" href="#">Contactos</a>
+          </nav>
+
+          <!-- <div>: agrupa o botão preto e a foto pequena -->
+          <div class="cabecalho__acoes">
+            <!-- <a class="botao">: botão preto "Disponibilidade" -->
+            <a class="botao" href="#">Disponibilidade</a>
+            <!-- <img>: foto pequena do fotógrafo (alt = texto alternativo para leitores de ecrã) -->
+            <img
+              class="cabecalho__foto"
               src="images/retrato-rui-costa.jpg"
-              alt="profile"
-              height="36"
-              width="36"
-              class="avatar">
+              alt="Retrato de Rui Costa"
+            />
           </div>
         </div>
       </div>
-      </header>
- <main class="w-full pt-20 bg-surface min-h-[calc(100vh-5rem)]">
-    <div class="flex flex-col w-full text-on-surface">
-        <section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin"
-        id="inicio">
-        <div class="max-w-4xl mx auto flex flex-col items-center text-center"></div>
-      <div class="relative mb-space-md group"> 
-        <div class="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden p-1.5 bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
-        <img
-        src="images/retrato-rui-costa.jpg"
-        alt="profile"
-        class="w-full h-full object-cover rounded-full filter grayscale-[15%] contrast-[105%]"
-        />
-       </div>
-       <div class="absolute -bottom-2 right-2 bg-surface px-2.5 py-0.5 rounded-full shadow-sm">
-        <span
-            class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase"
-           >Porto, PT</span>
-      </div>
-      </div>
-        <h1 class="font-display text-display-mobile md:text-display text-on-surface tracking-tight mb-space-xs">
-          Rui Costa</h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto leading-relaxed">
-        Fotógrafo de <strong class="text-on-surface font-semibold">
-          casamentos e paisagens</strong>, no Porto.</p>
-        
-          <nav  class="mt-space-md flex items-center justify-center gap-space-md font-label-md text-label-md tracking-widest uppercase text-on-surface-variant"
-            >
-            <a
-                class="hover:text-secondary transition-colors duration-200"
-                href="#inicio"
-                >Início</a
-              >
-              <span class="text-outline-variant">/</span>
-              <a
-                class="hover:text-secondary transition-colors duration-200"
-                href="#sobre"
-                >Sobre</a
-              >
-              <span class="text-outline-variant">/</span>
-              <a
-                class="hover:text-secondary transition-colors duration-200"
-                href="#especialidades"
-                >Serviços</a
-              >
-              <span class="text-outline-variant">/</span>
-              <a
-              class="hover:text-secondary transition-colors duration-200"
-                href="#contacto-rapido"
-                >Contactos</a>
+    </header>
 
+    <!-- <main>: conteúdo principal da página -->
+    <main class="principal">
+      <!-- ============ APRESENTAÇÃO (Início) ============ -->
+      <!-- <section>: bloco de apresentação; id="inicio" serve para os links #inicio -->
+      <section class="apresentacao" id="inicio">
+        <!-- <div>: caixa centrada com largura máxima -->
+        <div class="apresentacao__conteudo">
+          <!-- <div>: moldura do retrato (posição relativa para colocar a etiqueta "Porto, PT" por cima) -->
+          <div class="retrato">
+            <!-- <div>: moldura cinzenta à volta da foto -->
+            <div class="retrato__moldura">
+              <!-- <img>: retrato do fotógrafo -->
+              <img
+                class="retrato__imagem"
+                src="images/retrato-rui-costa.jpg"
+                alt="Rui Costa, fotógrafo no Porto"
+              />
+            </div>
+            <!-- <div>: etiqueta pequena sobreposta no canto inferior direito do retrato -->
+            <div class="retrato__etiqueta">
+              <!-- <span>: texto da etiqueta -->
+              <span>Porto, PT</span>
+            </div>
+          </div>
+
+          <!-- <h1>: título principal da página (só deve existir um) -->
+          <h1 class="apresentacao__titulo">Rui Costa</h1>
+
+          <!-- <p>: frase de apresentação -->
+          <p class="apresentacao__frase">
+            Fotógrafo de
+            <!-- <strong>: texto em destaque (mais escuro e mais forte) -->
+            <strong>casamentos e paisagens</strong>, no Porto.
+          </p>
+
+          <!-- <nav>: pequeno menu de atalhos para as secções da própria página -->
+          <nav class="atalhos" aria-label="Atalhos da página">
+            <!-- <a>: atalhos; <span> "/" são os separadores -->
+            <a href="#inicio">Início</a>
+            <span class="atalhos__separador">/</span>
+            <a href="#sobre">Sobre</a>
+            <span class="atalhos__separador">/</span>
+            <a href="#especialidades">Serviços</a>
+            <span class="atalhos__separador">/</span>
+            <a href="#contacto-rapido">Contactos</a>
           </nav>
         </div>
-    </section>
-   
-      <section class="class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin mb-space-xl"
-        >
-          <div
-            class="relative w-full h-[280px] md:h-[420px] rounded-lg overflow-hidden bg-surface-container"
-          >
-            <img
-              class="w-full h-full object-cover"
-              data-alt="Cinematic wide-angle panoramic photograph of the Douro valley terraces shrouded in soft morning mist with golden atmospheric Atlantic sunlight reflecting on calm river waters, fine art landscape photography style with warm terracotta and granite mineral tones"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvLLW_phG2EEthen9YrSOIn0SXxxax2_JbAQkU3EP3XRa5mQedDrIaoNO9Oxq64bsgjPxRjBwV87ciGxWTLH8nSUjAkPun3E-4TWFdn4-b_Ci3Mk0u2HYUAW_OCB8SCecYbIY8AA3MCd4GE5Xxe3L2Rnc_F0nb5sfuMjCQwSXySGVcjrLJ_OMC19TW39THGajmumUJMXayrj7ec49YucBbnSbm63BvAKLeTzDH4js"
-            />
-            <div
-              class="absolute bottom-4 left-6 bg-surface/90 backdrop-blur-sm px-3 py-1.5 rounded"
-            >
-              <span
-                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"
-                >Douro Vinhateiro • 41°09'N 7°48'W • Luz Matinal</span
-              >
+      </section>
+
+      <!-- ============ FAIXA DE PAISAGEM (foto larga do Douro) ============ -->
+      <!-- <section>: faixa com a foto larga -->
+      <section class="faixa">
+        <!-- <figure>: caixa da foto com altura fixa e cantos pouco arredondados -->
+        <figure class="faixa__caixa">
+          <!-- <img>: paisagem do Douro -->
+          <img
+            class="faixa__imagem"
+            src="images/douro-vinhateiro.jpg"
+            alt="Paisagem do Douro Vinhateiro com nevoeiro matinal sobre os socalcos e o rio"
+          />
+          <!-- <figcaption>: legenda da foto, colocada no canto inferior esquerdo -->
+          <figcaption class="faixa__legenda">
+            <!-- <span>: texto pequeno em maiúsculas dentro da legenda -->
+            <span>Douro Vinhateiro • 41°09'N 7°48'W • Luz Matinal</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ============ SOBRE MIM ============ -->
+      <!-- <section>: fundo cinzento-claro; id="sobre" serve para o atalho #sobre -->
+      <section class="sobre" id="sobre">
+        <!-- <div>: grelha de 12 colunas (texto à esquerda, caixa e foto à direita) -->
+        <div class="sobre__grelha">
+          <!-- <div>: coluna da esquerda (7 colunas) -->
+          <div class="sobre__texto">
+            <!-- <span>: etiqueta pequena castanha por cima do título -->
+            <span class="rotulo">01 / Biografia</span>
+            <!-- <h2>: título da secção -->
+            <h2 class="titulo-secao">Sobre mim</h2>
+
+            <!-- <div>: agrupa os dois parágrafos -->
+            <div class="sobre__paragrafos">
+              <!-- <p>: parágrafo de texto -->
+              <p>Comecei a fotografar aos 15 anos, com a máquina do meu avô.</p>
+              <p>
+                Hoje fotografo pessoas e lugares com uma
+                <!-- <abbr>: abreviatura; ao passar o rato aparece o significado (title) -->
+                <abbr class="sobre__abreviatura" title="câmara reflex digital">DSLR</abbr>,
+                sempre com luz natural.
+              </p>
+            </div>
+
+            <!-- <div>: bloco das especialidades; id="especialidades" serve para o atalho "Serviços" -->
+            <div class="especialidades" id="especialidades">
+              <!-- <h3>: subtítulo pequeno -->
+              <h3 class="especialidades__titulo">Especialidades</h3>
+              <!-- <ul>: lista (2 colunas em ecrãs médios/grandes) -->
+              <ul class="especialidades__lista">
+                <!-- <li>: cada especialidade, com uma bolinha castanha antes do texto -->
+                <li class="especialidades__item">
+                  <span class="especialidades__bolinha"></span>
+                  <span>Fotografia documental de casamento</span>
+                </li>
+                <li class="especialidades__item">
+                  <span class="especialidades__bolinha"></span>
+                  <span>Sessões de família ao ar livre</span>
+                </li>
+                <li class="especialidades__item">
+                  <span class="especialidades__bolinha"></span>
+                  <span>Paisagens naturais do Norte de Portugal</span>
+                </li>
+                <li class="especialidades__item">
+                  <span class="especialidades__bolinha"></span>
+                  <span>Impressão artística em papéis de algodão</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
-        <!-- Section: Sobre mim & Curiosidade -->
-        <section
-          class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl bg-surface-container-low"
-          id="sobre"
-        >
-          <div
-            class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-start"
-          >
-            <!-- Narrative Column -->
-            <div class="md:col-span-7 flex flex-col space-y-space-md">
-              <div class="flex items-center gap-2">
-                <span
-                  class="font-label-sm text-label-sm uppercase tracking-widest text-secondary"
-                  >01 / Biografia</span
-                >
-              </div>>
-        <!-- Sobre mim -->
-        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight"
-        >Sobre mim</h2>
-        <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-        <p>Comecei a fotografar aos 15 anos, com a máquina do meu avô.</p>
-        <p>
-          Hoje fotografo pessoas e lugares com uma
-          <abbr class="no-underline cursor-help font-medium text-on-surface"
-           title="câmara reflex digital">DSLR</abbr>, sempre com luz
-          natural.
-        </p>
-        </div>
-        <div class="pt-space-md" id="especialidades">
-        <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface mb-space-sm font-semibold"
-        >Especialidades</h3>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <li class="flex items-center gap-3 p-3 bg-surface rounded">
-                    <span
-                      class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"
-                    ></span>
-                    <span class="font-body-md text-body-md text-on-surface"
-                      >Fotografia documental de casamento</span
-                    >
-                  </li>
-                  <li class="flex items-center gap-3 p-3 bg-surface rounded">
-                    <span
-                      class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"
-                    ></span>
-                    <span class="font-body-md text-body-md text-on-surface"
-                      >Sessões de família ao ar livre</span
-                    >
-                  </li>
-                  <li class="flex items-center gap-3 p-3 bg-surface rounded">
-                    <span
-                      class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"
-                    ></span>
-                    <span class="font-body-md text-body-md text-on-surface"
-                      >Paisagens naturais do Norte de Portugal</span
-                    >
-                  </li>
-                  <li class="flex items-center gap-3 p-3 bg-surface rounded">
-                    <span
-                      class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"
-                    ></span>
-                    <span class="font-body-md text-body-md text-on-surface"
-                      >Impressão artística em papéis de algodão</span
-                    >
-                  </li>
-                </ul>
-        </div>
-        </div>
-           <p>
-            <strong>Sabiam que…</strong> a primeira fotografia da história foi
-            tirada em 1826, por Joseph Nicéphore Niépce, e demorou 8 horas de
-            exposição.
-          </p>
-        </div>
-      </section>
-         <!-- Exposições e Percurso -->
-      <section  class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl">
-<div class="max-w-5xl mx-auto">
-            <div class="mb-space-lg max-w-2xl">
-              <span
-                class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-space-xs"
-                >02 / Currículo • Arquivo</span
-              >
-        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight mb-2"
-        >Exposições e Reconhecimento</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant">
-        >Alguns dos momentos mais marcantes do meu percurso fotográfico:</p>
-        
-         </div>
-            <!-- Minimalist Editorial Table -->
-            <div
-              class="w-full overflow-x-auto bg-surface-container-lowest rounded-lg shadow-sm"
-            >
-        <table class="w-full text-left border-collapse">
-          <caption class="text-left font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-6 py-4 bg-surface-container-low">
-            Histórico de exposições e distinções de Rui Costa
-          </caption>
-          <thead>
-            <tr
-             class="bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider"
-                  >
-                    <th class="py-4 px-6 font-semibold w-24" scope="col">
-                      Ano
-                    </th>
-                    <th class="py-4 px-6 font-semibold" scope="col">
-                      Exposição / Distinção
-                    </th>
-                    <th class="py-4 px-6 font-semibold" scope="col">
-                      Galeria / Organização
-                    </th>
-                    <th class="py-4 px-6 font-semibold text-right" scope="col">
-                      Cidade
-                    </th>
-         >
-            </tr>
-          </thead>
-          <tbody class="divide-y-0">
-            <tr>
-              class="transition-colors duration-200 hover:bg-surface-container-low group"
-                  >
-                    <td
-                      class="py-5 px-6 font-display text-headline-sm text-secondary group-hover:text-on-surface"
-                    >
-                      2025
-                    </td>
-                    <td
-                      class="py-5 px-6 font-body-md text-body-md font-medium text-on-surface"
-                    >
-                      Exposição Individual "Luzes do Douro"
-                    </td>
-                    <td
-                      class="py-5 px-6 font-body-md text-body-md text-on-surface-variant"
-                    >
-                      Galeria Municipal
-                    </td>
-                    <td
-                      class="py-5 px-6 font-label-md text-label-md text-on-surface-variant text-right uppercase tracking-wider"
-                    >
-                      Porto
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-surface-container-lowest transition-colors duration-200 hover:bg-surface-container-low group"
-                  >
-                    <td
-                      class="py-5 px-6 font-display text-headline-sm text-secondary group-hover:text-on-surface"
-                    >
-                      2024
-                    </td>
-                    <td
-                      class="py-5 px-6 font-body-md text-body-md font-medium text-on-surface"
-                    >
-                      Menção Honrosa em Fotografia de Paisagem
-                    </td>
-                    <td
-                      class="py-5 px-6 font-body-md text-body-md text-on-surface-variant"
-                    >
-                      Festival de Fotografia do Norte
-                    </td>
-                    <td
-                      class="py-5 px-6 font-label-md text-label-md text-on-surface-variant text-right uppercase tracking-wider"
-                    >
-                      Braga
-                    </td>
-                  </tr>
-                  <tr
-                    class="transition-colors duration-200 hover:bg-surface-container-low group"
-                  >
-                    <td
-                      class="py-5 px-6 font-display text-headline-sm text-secondary group-hover:text-on-surface"
-                    >
-                      2022
-                    </td>
-                    <td
-                      class="py-5 px-6 font-body-md text-body-md font-medium text-on-surface"
-                    >
-                      Exposição Coletiva "Gentes do Norte"
-                    </td>
-                    <td
-                      class="py-5 px-6 font-body-md text-body-md text-on-surface-variant"
-                    >
-                      Centro Cultural Regional
-                    </td>
-                    <td
-                      class="py-5 px-6 font-label-md text-label-md text-on-surface-variant text-right uppercase tracking-wider"
-                    >
-                      Guimarães
-                    </td>
-            </tr>
-          </tbody>
-        </table>
-            </div>
-</div>
-      </section>
-      <!-- Section: O que dizem os clientes (Testimonials) -->
-       <section
-      class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl bg-surface-container-low"
-        >
-          <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-space-lg">
-              <span
-                class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-space-xs"
-                >03 / Testemunho</span
-              >
-              <h2
-                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight"
-              >
-                O que dizem os clientes
-              </h2>
-            </div>
-            <!-- Testimonial Editorial Plate -->
-            <article
-              class="relative bg-surface rounded-xl p-8 md:p-14 shadow-sm text-center flex flex-col items-center"
-            >
-              <span
-                class="material-symbols-outlined text-4xl text-secondary mb-4 opacity-75"
-                >format_quote</span
-              >
-              <blockquote
-                class="font-headline-md text-headline-sm md:text-headline-md italic text-on-surface max-w-2xl leading-snug mb-space-md"
-              >
-                «As fotografias do nosso casamento são o nosso maior tesouro.»
-              </blockquote>
-              <div class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-full overflow-hidden bg-surface-container"
-                >
-                  <img
-                    class="w-full h-full object-cover"
-                    data-alt="Editorial close-up of a smiling bride and groom in vintage attire celebrating their wedding in a historic Porto manor garden, soft atmospheric natural lighting"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuABJeFjQiRIvq3bHhgYr9phaH3LO1aviFNAnKUScohmC8b4niKVrf8bsKEKfiyAZLtUp9Qk_YHoSEuv9W_dSwpEk3QAIxxeoiqQdMwYlPIMxDzAFx9swUo5dQHeFEbNgaM0sntRV4la5kSO203tp839OkHV4LJJvXbv0LneO-0KqTHKQQquS6estGGDUQxxUSFDCNK8cww0Qa0a1nf3ymZ08C4QlK6vbvHn8Ot9Usk"
-                  />
-                </div>
-                <cite
-                  class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant not-italic font-semibold"
-                >
-                  — Marta e Pedro, casaram em 2025
-                </cite>
+
+          <!-- <div>: coluna da direita (5 colunas) -->
+          <div class="sobre__lateral">
+            <!-- <aside>: caixa lateral com a curiosidade (conteúdo complementar) -->
+            <aside class="curiosidade">
+              <!-- <div>: linha com o ícone e a palavra "Curiosidade" -->
+              <div class="curiosidade__cabecalho">
+                <!-- <span>: ícone (o nome do ícone é o texto) -->
+                <span class="icone icone--18" aria-hidden="true">history_edu</span>
+                <span class="curiosidade__nome">Curiosidade</span>
               </div>
-              <div
-                class="mt-space-md pt-4 flex items-center justify-center gap-6 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest"
-              >
-                <span>Quinta da Gricha</span>
-                <span>•</span>
-                <span>Douro</span>
+              <!-- <p>: frase em itálico -->
+              <p class="curiosidade__frase">
+                <!-- <strong>: pequeno título "Sabiam que…" em letras maiúsculas -->
+                <strong class="curiosidade__titulo">Sabiam que…</strong>
+                a primeira fotografia da história foi tirada em 1826, por Joseph
+                Nicéphore Niépce, e demorou 8 horas de exposição.
+              </p>
+              <!-- <div>: linha de rodapé da caixa (local à esquerda, ano à direita) -->
+              <div class="curiosidade__rodape">
+                <span>Le Gras • França</span>
+                <span>1826</span>
               </div>
-            </article>
+            </aside>
+
+            <!-- <figure>: segunda foto (papel de algodão) com legenda por cima -->
+            <figure class="foto-papel">
+              <!-- <img>: foto do papel de algodão -->
+              <img
+                class="foto-papel__imagem"
+                src="images/papel-algodao-arquivo.jpg"
+                alt="Impressões fotográficas em papel de algodão sobre uma mesa de carvalho escuro"
+              />
+              <!-- <div>: camada escura transparente (10%) por cima da foto -->
+              <div class="foto-papel__camada"></div>
+              <!-- <figcaption>: legenda branca no canto inferior esquerdo -->
+              <figcaption class="foto-papel__legenda">
+                Papel de Algodão 310gsm • Arquivo
+              </figcaption>
+            </figure>
           </div>
-        </section>
-        <!-- Section: Contacto rápido -->
-        <section
-          class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl"
-          id="contacto-rapido"
-        >
-          <div
-            class="max-w-3xl mx-auto text-center bg-surface-container p-8 md:p-14 rounded-xl shadow-sm"
-          >
-            <span
-              class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-space-xs"
-              >04 / Agendamento</span
-            >
-            <h2
-              class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight mb-space-md"
-            >
-              Contacto rápido
+        </div>
+      </section>
+
+      <!-- ============ EXPOSIÇÕES E RECONHECIMENTO ============ -->
+      <!-- <section>: secção da tabela de exposições -->
+      <section class="exposicoes">
+        <!-- <div>: caixa centrada com largura máxima -->
+        <div class="exposicoes__conteudo">
+          <!-- <div>: cabeçalho da secção (etiqueta, título e frase) -->
+          <div class="exposicoes__cabecalho">
+            <span class="rotulo rotulo--bloco">02 / Currículo • Arquivo</span>
+            <h2 class="titulo-secao exposicoes__titulo">
+              Exposições e Reconhecimento
             </h2>
-            <p
-              class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-space-lg max-w-xl mx-auto"
-            >
-              Têm dúvidas sobre as datas disponíveis? Enviem um e-mail para
-              <a
-                class="destaque text-on-surface font-semibold underline underline-offset-4 decoration-secondary hover:text-secondary transition-colors duration-200"
-                href="mailto:rui.costa@exemplo.pt"
-                >rui.costa@exemplo.pt</a
-              >
-              ou peçam um orçamento através da
-              <a
-                class="botao inline-block mt-4 md:mt-0 font-label-md text-label-md uppercase tracking-wider px-space-md py-2.5 bg-primary text-on-primary hover:bg-secondary transition-colors duration-200 rounded"
-                href="contactos.html#orcamento"
-                >Página de Contactos</a
-              >.
+            <!-- <p>: frase de introdução -->
+            <p class="exposicoes__intro">
+              Alguns dos momentos mais marcantes do meu percurso fotográfico:
             </p>
-            <div
-              class="flex flex-col sm:flex-row items-center justify-center gap-space-md"
-            >
-              <a
-                class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 bg-surface text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-colors duration-200 shadow-sm"
-                href="mailto:rui.costa@exemplo.pt"
-              >
-                <span class="material-symbols-outlined text-lg text-secondary"
-                  >mail</span
-                >
-                Enviar Mensagem Direta
-              </a>
-              <a
-                class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-secondary transition-colors duration-200"
-                href="contactos.html#orcamento"
-              >
-                <span class="material-symbols-outlined text-lg"
-                  >calendar_today</span
-                >
-                Pedir Orçamento 2026/27
-              </a>
-            </div>
-            <div
-              class="mt-space-lg flex items-center justify-center gap-4 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest"
-            >
-              <span>Resposta em menos de 24 horas</span>
-              <span>•</span>
-              <span>Atelier em Miguel Bombarda</span>
-            </div>
           </div>
-        </section>
-      </div>
+
+          <!-- <div>: caixa branca que envolve a tabela (permite deslizar em ecrãs pequenos) -->
+          <div class="tabela-caixa">
+            <!-- <table>: tabela de exposições -->
+            <table class="tabela">
+              <!-- <caption>: legenda da tabela (descreve o que a tabela mostra) -->
+              <caption class="tabela__legenda">
+                Histórico de exposições e distinções de Rui Costa
+              </caption>
+              <!-- <thead>: cabeçalho da tabela -->
+              <thead>
+                <!-- <tr>: linha da tabela -->
+                <tr class="tabela__cabecalho">
+                  <!-- <th scope="col">: título de coluna -->
+                  <th class="tabela__ano-titulo" scope="col">Ano</th>
+                  <th scope="col">Exposição / Distinção</th>
+                  <th scope="col">Galeria / Organização</th>
+                  <th class="tabela__direita" scope="col">Cidade</th>
+                </tr>
+              </thead>
+              <!-- <tbody>: corpo da tabela (as linhas de dados) -->
+              <tbody>
+                <tr class="tabela__linha">
+                  <!-- <td>: célula de dados -->
+                  <td class="tabela__ano">2025</td>
+                  <td class="tabela__nome">Exposição Individual "Luzes do Douro"</td>
+                  <td class="tabela__org">Galeria Municipal</td>
+                  <td class="tabela__cidade">Porto</td>
+                </tr>
+                <tr class="tabela__linha">
+                  <td class="tabela__ano">2024</td>
+                  <td class="tabela__nome">Menção Honrosa em Fotografia de Paisagem</td>
+                  <td class="tabela__org">Festival de Fotografia do Norte</td>
+                  <td class="tabela__cidade">Braga</td>
+                </tr>
+                <tr class="tabela__linha">
+                  <td class="tabela__ano">2022</td>
+                  <td class="tabela__nome">Exposição Coletiva "Gentes do Norte"</td>
+                  <td class="tabela__org">Centro Cultural Regional</td>
+                  <td class="tabela__cidade">Guimarães</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TESTEMUNHO ============ -->
+      <!-- <section>: secção com fundo cinzento-claro -->
+      <section class="testemunho">
+        <!-- <div>: caixa centrada com largura máxima -->
+        <div class="testemunho__conteudo">
+          <!-- <div>: cabeçalho centrado -->
+          <div class="testemunho__cabecalho">
+            <span class="rotulo rotulo--bloco">03 / Testemunho</span>
+            <h2 class="titulo-secao">O que dizem os clientes</h2>
+          </div>
+
+          <!-- <article>: cartão do testemunho (conteúdo independente) -->
+          <article class="cartao-testemunho">
+            <!-- <span>: ícone de aspas -->
+            <span class="icone icone--36 cartao-testemunho__aspas" aria-hidden="true">format_quote</span>
+            <!-- <blockquote>: citação do cliente -->
+            <blockquote class="cartao-testemunho__citacao">
+              «As fotografias do nosso casamento são o nosso maior tesouro.»
+            </blockquote>
+            <!-- <div>: linha com foto pequena e nome dos clientes -->
+            <div class="cartao-testemunho__autor">
+              <!-- <div>: moldura da foto pequena -->
+              <div class="cartao-testemunho__foto">
+                <img
+                  src="images/marta-pedro-casamento.jpg"
+                  alt="Marta e Pedro no dia do casamento"
+                />
+              </div>
+              <!-- <cite>: nome de quem disse a citação -->
+              <cite class="cartao-testemunho__nome">— Marta e Pedro, casaram em 2025</cite>
+            </div>
+            <!-- <div>: local do casamento -->
+            <div class="cartao-testemunho__local">
+              <span>Quinta da Gricha</span>
+              <span>•</span>
+              <span>Douro</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ CONTACTO RÁPIDO ============ -->
+      <!-- <section>: secção de contacto; id="contacto-rapido" serve para o atalho "Contactos" -->
+      <section class="contacto" id="contacto-rapido">
+        <!-- <div>: caixa cinzenta centrada -->
+        <div class="contacto__caixa">
+          <span class="rotulo rotulo--bloco">04 / Agendamento</span>
+          <h2 class="titulo-secao contacto__titulo">Contacto rápido</h2>
+          <!-- <p>: texto com link de e-mail (classe destaque) e botão (classe botao) -->
+          <p class="contacto__texto">
+            Têm dúvidas sobre as datas disponíveis? Enviem um e-mail para
+            <!-- <a class="destaque">: e-mail sublinhado a castanho; mailto: abre o programa de e-mail -->
+            <a class="destaque" href="mailto:rui.costa@exemplo.pt">rui.costa@exemplo.pt</a>
+            ou peçam um orçamento através da
+            <!-- <a class="botao">: botão preto dentro do texto, leva ao formulário de orçamento -->
+            <a class="botao botao--no-texto" href="contactos.html#orcamento">Página de Contactos</a>.
+          </p>
+
+          <!-- <div>: linha com os dois botões grandes -->
+          <div class="contacto__botoes">
+            <!-- <a>: botão claro com ícone de e-mail -->
+            <a class="botao botao--claro" href="mailto:rui.costa@exemplo.pt">
+              <span class="icone icone--18 icone--castanho" aria-hidden="true">mail</span>
+              Enviar Mensagem Direta
+            </a>
+            <!-- <a>: botão preto com ícone de calendário -->
+            <a class="botao botao--grande" href="contactos.html#orcamento">
+              <span class="icone icone--18" aria-hidden="true">calendar_today</span>
+              Pedir Orçamento 2026/27
+            </a>
+          </div>
+
+          <!-- <div>: informações pequenas por baixo dos botões -->
+          <div class="contacto__notas">
+            <span>Resposta em menos de 24 horas</span>
+            <span>•</span>
+            <span>Atelier em Miguel Bombarda</span>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="w-full bg-surface-container-low">
-      <div
-        class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl"
-      >
-        <div
-          class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline pb-space-lg"
-        >
-          <div class="md:col-span-5">
-            <span
-              class="font-display text-headline-md text-on-surface block mb-space-xs"
-              >Rui Costa — Fotografia</span
-            >
-            <p
-              class="font-body-sm text-body-sm text-on-surface-variant max-w-sm"
-            >
+
+    <!-- ============ RODAPÉ ============ -->
+    <!-- <footer>: fim da página -->
+    <footer class="rodape">
+      <!-- <div>: caixa com as margens laterais da página -->
+      <div class="rodape__interior">
+        <!-- <div>: grelha de 12 colunas (3 blocos de informação) -->
+        <div class="rodape__grelha">
+          <!-- <div>: bloco 1 (5 colunas): marca e frase -->
+          <div class="rodape__marca">
+            <span class="rodape__nome">Rui Costa — Fotografia</span>
+            <p class="rodape__frase">
               Luz atlântica, granito e narrativa documental. Casamentos e
               paisagem autoral no Porto e Douro.
             </p>
           </div>
-          <div
-            class="md:col-span-4 mt-space-md md:mt-0 flex flex-col gap-space-xs"
-          >
-            <span
-              class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant"
-              >Estúdio</span
-            ><span class="font-body-sm text-body-sm text-on-surface"
-              >Rua de Miguel Bombarda, Porto</span
-            ><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors duration-200"
-              href="mailto:atelier@ruicosta.pt"
-              >atelier@ruicosta.pt</a
-            >
+          <!-- <div>: bloco 2 (4 colunas): estúdio -->
+          <div class="rodape__estudio">
+            <span class="rodape__rotulo">Estúdio</span>
+            <span class="rodape__texto">Rua de Miguel Bombarda, Porto</span>
+            <a class="rodape__link" href="mailto:atelier@ruicosta.pt">atelier@ruicosta.pt</a>
           </div>
-          <div
-            class="md:col-span-3 mt-space-md md:mt-0 flex flex-col gap-space-xs md:text-right"
-          >
-            <span
-              class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant"
-              >Galeria &amp; Editorial</span
-            ><span class="font-body-sm text-body-sm text-on-surface-variant"
-              >Disponibilidade Limitada 2026/2027</span
-            >
+          <!-- <div>: bloco 3 (3 colunas): disponibilidade, alinhado à direita -->
+          <div class="rodape__galeria">
+            <span class="rodape__rotulo">Galeria &amp; Editorial</span>
+            <span class="rodape__texto rodape__texto--claro">Disponibilidade Limitada 2026/2027</span>
           </div>
         </div>
-        <div
-          class="pt-space-md flex flex-col md:flex-row justify-between items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase"
-        >
-          <span>© 2026 Rui Costa. Todos os direitos reservados.</span
-          ><span>Porto • Portugal</span>
+        <!-- <div>: linha final com direitos e localização -->
+        <div class="rodape__fim">
+          <span>© 2026 Rui Costa. Todos os direitos reservados.</span>
+          <span>Porto • Portugal</span>
         </div>
       </div>
     </footer>
