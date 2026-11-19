@@ -114,7 +114,7 @@ table {
 }
 
 html {
-  scrollbar-width: none;                     /* o mesmo no Firefox */
+  scrollbar-width: none;                     
 }
 
 /* body: define a fonte, a cor e o fundo de toda a página */
@@ -453,7 +453,7 @@ body {
   padding: 2px 10px;                         /* 2px cima/baixo, 10px lados */
   background: var(--fundo);
   border-radius: var(--canto-redondo);
-  box-shadow: var(--sombra);
+  box-shadow: va r(--sombra);
 }
 
 /* Texto da etiqueta */
